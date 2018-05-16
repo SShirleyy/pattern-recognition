@@ -1,0 +1,23 @@
+% D is the directory of training example
+%pD is DiscreteD
+function hmm = TrainMelody(nStates,D)
+
+pD=DiscreteD;
+obsData = [];
+
+for r = 1 : 
+    
+melodyfile = sprintf(['%d.wav'], r);
+[Y, FS] = audioread([D,melodyfile]);
+frIsequence = GetMusicFeatures(Y,FS);
+
+lData(r) = size(frIsequence,2);
+
+[obs,] = FeatureExtract(frIsequence);
+
+obsData = [obsData,obs];
+
+end
+  hmm = MakeLeftRightHMM(nStates,pD,obsData,lData);
+
+end

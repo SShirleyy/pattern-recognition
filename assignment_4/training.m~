@@ -1,0 +1,15 @@
+
+clear all
+
+hmms(1) = TrainMelody(8,'later');
+hmms(2) = TrainMelody(8,'mom');
+hmms(3) = TrainMelody(8,'mouse');
+hmms(4) = TrainMelody(4,'slow');
+hmms(5) = TrainMelody(12,'night');
+hmms(6) = TrainMelody(8,'you'); 
+hmms(7) = TrainMelody(8,'TwoTiger'); 
+hmms(8) = TrainMelody(8,'TwinklStar'); 
+hmms(9) = TrainMelody(8,'rose'); 
+
+%test
+
